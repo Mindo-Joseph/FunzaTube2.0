@@ -1,0 +1,20 @@
+<h1 class= "h3 ml-3 my-5 text-bold d-block d-md-none" > Select a topic to  <br> start your call </h1>
+<h1 class= "h3 ml-3 my-5 text-bold d-md-block d-none" > Select a topic to start your call </h1>
+
+
+<%# This is the list of the subjects that we got from the @subjects variable, and we are creating a table with all of them! %>
+<%# All of the sessions will use the same room for now to keep it simpler %>
+
+  <ul cass="list-group list-group-flush bg-transparent">
+    <% @subjects.each do |subject| %>
+      <li class = "list-group-item bg-transparent col-10 col-md-5 "> 
+        <%= link_to subject.title, sessions_show_path(subject: subject), method: :post, class: "text-bold h5" %> 
+        <p class="text-warning mb-1"> Mentor: <%= subject.tutor %> </p> 
+      </li>
+    <% end %>
+  </ul>
+  <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+<script>
+callFrame = window.DailyIframe.createFrame();
+callFrame.join({ url: 'https://tutorial.daily.co/hello' })
+</script>
