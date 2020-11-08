@@ -9,6 +9,7 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 gem 'pg'
 gem 'cloudinary'
 gem 'devise'
+gem 'mini_racer', '~> 0.3.1'
 gem 'bootstrap', '~> 5.0.0.alpha1'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
