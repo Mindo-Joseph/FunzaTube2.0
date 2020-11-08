@@ -1,0 +1,18 @@
+development:
+    cloud_name: mindojoe23
+    api_key: '674342417547628'
+    api_secret: KFXslb63EzZGfz9fbDr6SnZ3PAk
+    enhance_image_tag: true
+    static_file_support: false
+  production:
+    cloud_name: mindojoe23
+    api_key: '674342417547628'
+    api_secret: KFXslb63EzZGfz9fbDr6SnZ3PAk
+    enhance_image_tag: true
+    static_file_support: true
+  test:
+    cloud_name: mindojoe23
+    api_key: '674342417547628'
+    api_secret: KFXslb63EzZGfz9fbDr6SnZ3PAk
+    enhance_image_tag: true
+    static_file_support: false

@@ -1,30 +1,25 @@
 
 
     <title>FunzaTube</title>
-    
-  
-<body>
 
-   
   <!--header-->
   <header class="main-header clearfix" role="header">
     <div class="logo">
-      <a href="#"><em>Funza</em>Tube</a>
+      <%= link_to  "FunzaTube",  root_path %>
     </div>
     <nav class="main-nav" role="navigation">
       <ul class="main-menu">
-        <li><a href="#section1">Home</a></li>
-        <li class="has-submenu"><a href="#section2">About Us</a>
+        <li><%= link_to  "Home",  root_path %></li>
+        <li class="has-submenu"><%= link_to  "About Us" %>
           <ul class="sub-menu">
-            <li><a href="#section2">Who we are?</a></li>
-            <li><a href="#section3">What we do?</a></li>
-            <li><a href="#section3">How it works?</a></li>
-            <li><a href="https://templatemo.com/about" rel="sponsored" class="external">External URL</a></li>
+            <li><%= link_to  "Who are we" %></li>
+            <li><%= link_to  "What we do" %></li>
+            <li><%= link_to  "How it works"%></li>
+           
           </ul>
         </li>
-        <li><a href="#section4">Courses</a></li>
-        <li><a href="#section6">Contact</a></li>
-        <li><a href="https://templatemo.com" class="external">External</a></li>
+        <li><%= link_to  "Courses" %></li>
+        <li><%= link_to  "Contact" %></li>
       </ul>
     </nav>
   </header>
@@ -33,16 +28,16 @@
   <div id="pattern" class="pattern">
     <!--Begin Pattern HTML-->
     <div class="logo">
-      <a href="#"><em>Funza</em>Tube</a>
+      <%= link_to  "Home",root_path %><em>Funza</em>Tube
     </div>
-    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <%= link_to  "Menu", class: "menu-link"%><i class="fa fa-bars"></i>
     <nav id="menu" role="navigation">
       <ul class="responsive-menu">
-        <li><a href="#section1">Home</a></li>
-          <li><a href="#section2">About</a></li>
-          <li><a href="#section4">Courses</a></li>
-          <li><a href="#section5">Video</a></li>
-          <li><a href="#section6">Contact</a></li>
+        <li><%= link_to  "Home", root_path %></li>
+          <li><%= link_to  "About" %></li>
+          <li><%= link_to  "Courses" %></li>
+          <li><%= link_to  "Video" %></li>
+          <li><%= link_to  "Contact" %></li>
       </ul>
     </nav>
   </div>
@@ -56,7 +51,7 @@
               <h6>Peer Based Teaching</h6>
               <h2><em>Your</em> Classroom</h2>
               <div class="main-button">
-                  <div class="scroll-to-section"><a href="#section2">Discover more</a></div>
+                  <div class="scroll-to-section"><%= link_to  "Discover More" %></div>
               </div>
           </div>
       </div>
@@ -76,7 +71,7 @@
               <div class="content-hide">
                 <p>Introducing content from uploaders etc</p>
                 <p class="hidden-sm">The site offers alot of content</p>
-                <div class="scroll-to-section"><a href="#section2">More Info.</a></div>
+                <div class="scroll-to-section"><%= link_to  "More Info" %></div>
             </div>
             </div>
           </div>
@@ -90,7 +85,7 @@
               <div class="content-hide">
                 <p>Set up a meeting with a creator and attend one of his popular classes</p>
                 <p class="hidden-sm">All classes are subject to payment or free depending on the creator</p>
-                <div class="scroll-to-section"><a href="#section3">Details</a></div>
+                <div class="scroll-to-section"><%= link_to  "text" %>"#section3">Details</a></div>
             </div>
             </div>
           </div>
@@ -104,7 +99,7 @@
               <div class="content-hide">
                 <p>Real meetings seek to emulate normal face to face learning</p>
                 <p class="hidden-sm">Due to COVID-19 restrictions this option will not be available for a while</p>
-                <div class="scroll-to-section"><a href="#section4">Read More</a></div>
+                <div class="scroll-to-section"><%= link_to  "Read more" %></div>
             </div>
             </div>
           </div>
@@ -124,9 +119,9 @@
         <div class="col-md-12">
           <div id='tabs'>
             <ul>
-              <li><a href='#tabs-1'>Best Education</a></li>
-              <li><a href='#tabs-2'>Quality content</a></li>
-              <li><a href='#tabs-3'>Easy to use</a></li>
+              <li><%= link_to  "Best Education" %></li>
+              <li><%= link_to  "Quality Content" %></li>
+              <li><%= link_to  "Easy to use" %></li>
             </ul>
             <section class='tabs-content'>
               <article id='tabs-1'>
@@ -187,7 +182,7 @@
                 <%= image_tag("author-01.png") %>
               </div>
               <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
+                <%= link_to  "Pay" %><i class="fa fa-angle-double-right"></i></a>
               </div>
             </div>
           </div>
@@ -200,7 +195,7 @@
                 <%= image_tag("author-02.png") %>
               </div>
               <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
+                <%= link_to  "Free" %> <i class="fa fa-angle-double-right"></i></a>
               </div>
             </div>
           </div>
@@ -213,7 +208,7 @@
                 <%= image_tag("author-03.png" ) %>
               </div>
               <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
+                <%= link_to  "text" %>"#">Pay <i class="fa fa-angle-double-right"></i></a>
               </div>
             </div>
           </div>
@@ -226,7 +221,7 @@
                 <%= image_tag("author-04.png") %>
               </div>
               <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
+                <%= link_to  "Free" %><i class="fa fa-angle-double-right"></i>
               </div>
             </div>
           </div>
@@ -239,7 +234,7 @@
                 <%= image_tag("author-05.png") %>
               </div>
               <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
+                <%= link_to  "text" %>"#">Pay <i class="fa fa-angle-double-right"></i>
               </div>
             </div>
           </div>
@@ -252,7 +247,7 @@
                 <%= image_tag("author-01.png") %>
               </div>
               <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
+                <%= link_to  "Free" %><i class="fa fa-angle-double-right"></i>
               </div>
             </div>
           </div>
@@ -265,7 +260,7 @@
                 <%= image_tag("author-02.png") %>
               </div>
               <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
+                <%= link_to  "Free" %><i class="fa fa-angle-double-right"></i>
               </div>
             </div>
           </div>
@@ -278,7 +273,7 @@
                 <%= image_tag("author-03.png") %>
               </div>
               <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
+                <%= link_to  "Pay" %><i class="fa fa-angle-double-right"></i>
               </div>
             </div>
           </div>
@@ -291,7 +286,7 @@
                 <%= image_tag("author-04.png") %>
               </div>
               <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
+                <%= link_to  "Pay" %><i class="fa fa-angle-double-right"></i>
               </div>
             </div>
           </div>
@@ -304,7 +299,7 @@
                 <%= image_tag("author-05.png") %>
               </div>
               <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
+                <%= link_to  "Free" %><i class="fa fa-angle-double-right"></i>
               </div>
             </div>
           </div>
@@ -317,7 +312,7 @@
                 <%= image_tag("author-01.png") %>
               </div>
               <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
+                <%= link_to  "Pay" %><i class="fa fa-angle-double-right"></i>
               </div>
             </div>
           </div>
