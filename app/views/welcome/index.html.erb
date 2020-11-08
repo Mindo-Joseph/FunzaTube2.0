@@ -45,7 +45,7 @@
 
   <!-- ***** Main Banner Area Start ***** -->
   <section class="section main-banner" id="top" data-section="section1">
-     <%= video_tag("introvideo.mp4")%>
+     <%= video_tag(["introvideo.mp4"],autoplay: true, loop: true, type: "video", muted: true) %>
       <div class="video-overlay header-text">
           <div class="caption">
               <h6>Peer Based Teaching</h6>
@@ -80,12 +80,12 @@
           <div class="features-post second-features">
             <div class="features-content">
               <div class="content-show">
-                <h4><i class="fa fa-graduation-cap"></i>Virtual Class</h4>
+                <h4><i class="fa fa-graduation-cap"></i>Virtual Sessions</h4>
               </div>
               <div class="content-hide">
                 <p>Set up a meeting with a creator and attend one of his popular classes</p>
                 <p class="hidden-sm">All classes are subject to payment or free depending on the creator</p>
-                <div class="scroll-to-section"><%= link_to  "text" %>"#section3">Details</a></div>
+                <div class="scroll-to-section"><%= link_to  "Details" %></div>
             </div>
             </div>
           </div>
@@ -94,7 +94,7 @@
           <div class="features-post third-features">
             <div class="features-content">
               <div class="content-show">
-                <h4><i class="fa fa-book"></i>Real Meeting</h4>
+                <h4><i class="fa fa-book"></i>Resources</h4>
               </div>
               <div class="content-hide">
                 <p>Real meetings seek to emulate normal face to face learning</p>
