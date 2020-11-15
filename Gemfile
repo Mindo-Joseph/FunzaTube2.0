@@ -8,7 +8,6 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 gem 'cloudinary'
-gem 'devise'
 gem 'owlcarousel-rails'
 gem 'mini_racer', '~> 0.3.1'
 gem 'bootstrap', '~> 5.0.0.alpha1'

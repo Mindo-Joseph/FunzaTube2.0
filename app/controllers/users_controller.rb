@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   
     def show
       @user = User.find_by(id: params[:id])
-      @uploads = @user.uploads.order(created_at: :desc)
+      # @uploads = @user.subjects.order(created_at: :desc)
     end
   
     def new
