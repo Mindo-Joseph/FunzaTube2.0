@@ -14,5 +14,11 @@ class UploadsController < ApplicationController
         end
         redirect_to root
     end
+    def index
+    
+    end
+    def show
+    
+    end
 end
 end
