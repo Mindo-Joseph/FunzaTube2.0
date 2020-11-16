@@ -7,6 +7,8 @@ ruby '2.7.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
+gem 'devise'
+gem 'gravatar_image_tag', '~> 1.2'
 gem 'cloudinary'
 gem 'owlcarousel-rails'
 gem 'mini_racer', '~> 0.3.1'

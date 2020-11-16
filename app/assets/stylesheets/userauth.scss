@@ -1,0 +1,16 @@
+.authforms-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    .card {
+        width: 25rem;
+        box-shadow: 2px 2px 2px 2px #fff;
+        .form-group, .actions {
+            padding: 1em 2em;
+        }
+        
+        
+
+    }
+}
