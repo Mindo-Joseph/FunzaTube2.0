@@ -1,0 +1,68 @@
+<p id="notice"><%= notice %></p>
+<div class="container wrapper">
+<div class="row">
+    <div class="intro-text col-9">
+    <h3 class="intro-title">YOUR TECH COURSES ALL IN ONE PLACE</h3>
+    <h6>
+        Find your peer created courses by students and even get to do personal sessions with tutors. <br> Get started by booking your session now
+    </h6>
+    <br>
+    <%# Setup the book now path %>
+    <button class='btn btn-primary'><%= link_to  "Book Now"%></button>
+    </div>
+    <div class="intro-image col-3">
+     <%= image_tag("notetakingstudent.jpeg", alt: 'student taking notes', size: 15*15)   %>
+    </div>
+</div>
+
+<div class="main-courses">
+    <h4>TRANSFORM THE WAY YOU LEARN TECH</h4>
+    <h6>Our site has all the relevant Computer Science courses ensuring you get the best form of peer material that has been upvoted by fellow students</h6>
+    <div class='boxed-courses-highlight'>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="card-flyer">
+                    <div class="text-box">
+                        <div class="image-box">
+                            <%= image_tag("notetakingstudent.jpeg", size: "10*10",class:'course-image')%>
+                        </div>
+                        <div class="text-container">
+                        <% courses = fetch_courses()%>
+                        <% details = get_specific_course_detail(courses)%>
+                            <h5><%= details%></h5>
+                            <p>Some course text blah blah</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <button class="btn btn-primary text-center"><%= link_to  "Explore"%></button>
+</div>
+<div class='latest-courses text-center'>
+    <h3>LATEST COURSES</h3>
+    <p>Some text here and all that </p>
+    <%= fetch_courses %>
+</div>
+<div class='testimonials'>
+    <h3> What other users say </h3>
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial p-3 bg-dark text-center rounded">
+                <%# Image tag goes here %>
+                <p>This is such an awesome site</p>
+                <h5>John Doe<h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
