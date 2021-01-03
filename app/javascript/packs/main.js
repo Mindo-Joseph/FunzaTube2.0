@@ -1,12 +1,16 @@
-import AOS from 'aos'
+import AOS from "aos";
 
+require("jquery.counterup");
+require("aos/dist/aos");
+require("owl.carousel/dist/owl.carousel");
+require("waypoints/lib/jquery.waypoints.min.js");
 
-!(function($) {
+!($ => {
   "use strict";
 
   // Preloader
   $(window).on('load', function() {
-    if ($('#preloader').length) {
+    if ($("#preloader").length) {
       $('#preloader').delay(100).fadeOut('slow', function() {
         $(this).remove();
       });
@@ -16,8 +20,8 @@ import AOS from 'aos'
   // Smooth scroll for the navigation menu and links with .scrollto classes
   var scrolltoOffset = $('#header').outerHeight() - 1;
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
+    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      const target = $(this.hash);
       if (target.length) {
         e.preventDefault();
 

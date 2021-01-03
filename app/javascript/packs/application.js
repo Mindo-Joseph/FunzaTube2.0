@@ -8,6 +8,7 @@
 //= require owl.carousel
 
 require("jquery")
+require("waypoints/lib/noframework.waypoints")
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
