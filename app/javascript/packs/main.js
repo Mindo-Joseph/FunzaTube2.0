@@ -2,8 +2,9 @@ import AOS from "aos";
 
 require("jquery.counterup");
 require("aos/dist/aos");
-require("owl.carousel/dist/owl.carousel");
+require("owl.carousel/dist/owl.carousel.min.js");
 require("waypoints/lib/jquery.waypoints.min.js");
+require("jquery.easing/jquery.easing.min");
 
 !($ => {
   "use strict";
