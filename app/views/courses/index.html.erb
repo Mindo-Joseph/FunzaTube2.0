@@ -1,68 +1,103 @@
 <p id="notice"><%= notice %></p>
-<div class="container wrapper">
-<div class="row">
-    <div class="intro-text col-9">
-    <h3 class="intro-title">YOUR TECH COURSES ALL IN ONE PLACE</h3>
-    <h6>
-        Find your peer created courses by students and even get to do personal sessions with tutors. <br> Get started by booking your session now
-    </h6>
-    <br>
-    <%# Setup the book now path %>
-    <button class='btn btn-primary'><%= link_to  "Book Now"%></button>
-    </div>
-    <div class="intro-image col-3">
-     <%= image_tag("notetakingstudent.jpeg", alt: 'student taking notes', size: 15*15)   %>
-    </div>
-</div>
+<main id="main" data-aos="fade-in">
 
-<div class="main-courses">
-    <h4>TRANSFORM THE WAY YOU LEARN TECH</h4>
-    <h6>Our site has all the relevant Computer Science courses ensuring you get the best form of peer material that has been upvoted by fellow students</h6>
-    <div class='boxed-courses-highlight'>
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                <div class="card-flyer">
-                    <div class="text-box">
-                        <div class="image-box">
-                            <%= image_tag("notetakingstudent.jpeg", size: "10*10",class:'course-image')%>
-                        </div>
-                        <div class="text-container">
-                        <% courses = fetch_courses()%>
-                        <% details = get_specific_course_detail(courses)%>
-                            <h5><%= details%></h5>
-                            <p>Some course text blah blah</p>
-                        </div>
-                    </div>
+      <h2>Courses</h2>
+      <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+    </div>
+  </div><!-- End Breadcrumbs -->
+
+  <!-- ======= Courses Section ======= -->
+  <section id="courses" class="courses">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="course-item">
+            <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
+            <div class="course-content">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4>Web Development</h4>
+                <p class="price">$169</p>
+              </div>
+
+              <h3><a href="course-details.html">Website Design</a></h3>
+              <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
+              <div class="trainer d-flex justify-content-between align-items-center">
+                <div class="trainer-profile d-flex align-items-center">
+                  <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+                  <span>Antonio</span>
                 </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <br>
-    <br>
-    <button class="btn btn-primary text-center"><%= link_to  "Explore"%></button>
-</div>
-<div class='latest-courses text-center'>
-    <h3>LATEST COURSES</h3>
-    <p>Some text here and all that </p>
-    <%= fetch_courses %>
-</div>
-<div class='testimonials'>
-    <h3> What other users say </h3>
-    
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="testimonial p-3 bg-dark text-center rounded">
-                <%# Image tag goes here %>
-                <p>This is such an awesome site</p>
-                <h5>John Doe<h5>
+                <div class="trainer-rank d-flex align-items-center">
+                  <i class="bx bx-user"></i>&nbsp;50
+                  &nbsp;&nbsp;
+                  <i class="bx bx-heart"></i>&nbsp;65
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
+        </div> <!-- End Course Item-->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="course-item">
+            <img src="assets/img/course-2.jpg" class="img-fluid" alt="...">
+            <div class="course-content">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4>Marketing</h4>
+                <p class="price">$250</p>
+              </div>
+
+              <h3><a href="course-details.html">Search Engine Optimization</a></h3>
+              <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
+              <div class="trainer d-flex justify-content-between align-items-center">
+                <div class="trainer-profile d-flex align-items-center">
+                  <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
+                  <span>Lana</span>
+                </div>
+                <div class="trainer-rank d-flex align-items-center">
+                  <i class="bx bx-user"></i>&nbsp;35
+                  &nbsp;&nbsp;
+                  <i class="bx bx-heart"></i>&nbsp;42
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- End Course Item-->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+          <div class="course-item">
+            <img src="assets/img/course-3.jpg" class="img-fluid" alt="...">
+            <div class="course-content">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4>Content</h4>
+                <p class="price">$180</p>
+              </div>
+
+              <h3><a href="course-details.html">Copywriting</a></h3>
+              <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
+              <div class="trainer d-flex justify-content-between align-items-center">
+                <div class="trainer-profile d-flex align-items-center">
+                  <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
+                  <span>Brandon</span>
+                </div>
+                <div class="trainer-rank d-flex align-items-center">
+                  <i class="bx bx-user"></i>&nbsp;20
+                  &nbsp;&nbsp;
+                  <i class="bx bx-heart"></i>&nbsp;85
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- End Course Item-->
+
+      </div>
+
     </div>
-</div>
-</div>
+  </section><!-- End Courses Section -->
+
+</main><!-- End #main -->
 
 
