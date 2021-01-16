@@ -15,7 +15,8 @@ gem 'mini_racer', '~> 0.3.1'
 gem 'bootstrap', '~> 5.0.0.alpha1'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
-
+gem 'google-cloud-storage', require: false
+gem 'dotenv-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
