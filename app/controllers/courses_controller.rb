@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  before_action :course, only: [:show, :edit, :update, :destroy]
+  # before_action :course, only: [:show, :edit, :update, :destroy]
 
 
   def index
@@ -8,6 +8,7 @@ class CoursesController < ApplicationController
 
  
   def show
+    @course = Course.find_by(id: params[:id])
   end
 
   # GET /subjects/new
@@ -18,7 +19,6 @@ class CoursesController < ApplicationController
   # GET /subjects/1/edit
   def edit
   end
-
   # POST /subjects
   # POST /subjects.json
   def create
@@ -67,6 +67,6 @@ class CoursesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def course_params
-      params.require(:course).permit(:title)
+      params.require(:course).permit(:title,:category,:price,:description,:seats,:schedule)
     end
 end
