@@ -19,9 +19,9 @@
             <span><%=Trainer.find_by(id:trainer_id).name  %></span>
           </div>
           <div class="trainer-rank d-flex align-items-center">
-            <i class="bx bx-user"></i>&nbsp;50
+            <%= fa_icon "users" %>50
             &nbsp;&nbsp;
-            <i class="bx bx-heart"></i>&nbsp;65
+            &nbsp;<%= fa_icon "heart" %>65
           </div>
         </div>
       </div>
