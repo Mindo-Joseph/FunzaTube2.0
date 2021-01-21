@@ -110,6 +110,8 @@ GEM
       ruby2_keywords
     faraday-net_http (1.0.1)
     ffi (1.13.1)
+    font-awesome-rails (4.7.0.6)
+      railties (>= 3.2, < 6.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     google-apis-core (0.2.0)
@@ -336,6 +338,7 @@ DEPENDENCIES
   cloudinary
   devise
   dotenv-rails
+  font-awesome-rails
   google-cloud-storage
   gravatar_image_tag (~> 1.2)
   jbuilder (~> 2.7)

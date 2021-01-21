@@ -9,7 +9,7 @@ class CoursesController < ApplicationController
  
   def show
     @course = Course.find_by(id: params[:id])
-    @image =  Course.find_by(id: params[:id]).imageUrl
+    # @image =  @course.imageUrl
   end
 
   # GET /subjects/new
