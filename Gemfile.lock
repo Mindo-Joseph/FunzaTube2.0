@@ -80,6 +80,14 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
+    carrierwave (1.2.3)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
+    carrierwave-google-storage (0.9.0)
+      activemodel (>= 3.2.0)
+      carrierwave (~> 1.2.0)
+      google-cloud-storage (~> 1.10)
     childprocess (3.0.0)
     cloudinary (1.18.1)
       aws_cf_signer
@@ -335,6 +343,7 @@ DEPENDENCIES
   bootstrap (~> 5.0.0.alpha1)
   byebug
   capybara (>= 2.15)
+  carrierwave-google-storage
   cloudinary
   devise
   dotenv-rails

@@ -20,12 +20,19 @@
           <h6 class="text-center mb-4 text-muted">
             Upload your files
           </h6>
-
+          <%= form_for(:resource, :url => resources_path, :method => "post", html: { multipart:true}) do |form| %>
           <div class="custom-file overflow-hidden rounded-pill mb-5">
-            <input id="customFile" type="file" class="custom-file-input rounded-pill">
-            <label for="customFile" class="custom-file-label rounded-pill">Choose file</label>
+            <%= form.label  :customFile%>
+            <%= form.file_field :customFile, class: "custom-file-input rounded-pill"%>
+
+
+
+              <div class="actions">
+                <%= form.submit %>
+              </div>
+            <% end %>
           </div>
-          <!-- End -->
+
 
 
 

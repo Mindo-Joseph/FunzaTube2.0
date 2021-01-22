@@ -7,7 +7,7 @@
       <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
         <h1>Learning Today,<br>Leading Tomorrow</h1>
         <h2>The best tech tutorial site</h2>
-        <a href="courses.html" class="btn-get-started">Get Started</a>
+        <%= link_to("Get Started",new_user_registration_path, class:"btn-get-started") %>
       </div>
     </section><!-- End Hero -->
 
@@ -253,6 +253,7 @@
 
     <a href="#" class="back-to-top"><%= fa_icon "arrow-up" %></a>
     <div id="preloader"></div>
+
 
 
     <%=javascript_pack_tag 'main'%>

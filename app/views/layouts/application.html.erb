@@ -23,12 +23,13 @@
           <li><%= link_to("Courses", courses_path) %></li>
           <li><%= link_to "Trainers", trainers_path %></li>
           <li><%= link_to "Videos", videos_path%></li>
-          <li><%= link_to "Upload", resources_path %></li>
+          <li><%= link_to "Resources", resources_path %></li>
 
         </ul>
+
       </nav><!-- .nav-menu -->
 
-      <a href="courses.html" class="get-started-btn">Get Started</a>
+      <%= link_to("Get Started",new_user_registration_path,class:"get-started-btn") %>
 
     </div>
   </header><!-- End Header -->
