@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_21_150229) do
+ActiveRecord::Schema.define(version: 2021_01_22_042318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,18 @@ ActiveRecord::Schema.define(version: 2021_01_21_150229) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "meeting_id", null: false
+    t.string "name"
+    t.date "date"
+    t.time "time"
+    t.string "email"
+    t.text "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["meeting_id"], name: "index_bookings_on_meeting_id"
+  end
+
   create_table "courses", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
@@ -48,6 +60,26 @@ ActiveRecord::Schema.define(version: 2021_01_21_150229) do
     t.bigint "trainer_id", null: false
     t.string "imageUrl"
     t.index ["trainer_id"], name: "index_courses_on_trainer_id"
+  end
+
+  create_table "meetings", force: :cascade do |t|
+    t.string "title"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.time "start_time"
+    t.time "end_time"
+    t.string "time_meeting"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_meetings_on_user_id"
+  end
+
+  create_table "resources", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.string "url"
   end
 
   create_table "trainers", force: :cascade do |t|
@@ -82,7 +114,19 @@ ActiveRecord::Schema.define(version: 2021_01_21_150229) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "videos", force: :cascade do |t|
+    t.string "name"
+    t.string "url"
+    t.bigint "trainer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["trainer_id"], name: "index_videos_on_trainer_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "bookings", "meetings"
   add_foreign_key "courses", "trainers"
+  add_foreign_key "meetings", "users"
   add_foreign_key "uploads", "courses"
+  add_foreign_key "videos", "trainers"
 end

@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'sessions/show'
-  resources :courses, :uploads, :trainers
+  resources :courses, :uploads, :trainers, :videos, :resources
+  defaults format: :json do
+    resource :meetings
+    resource :bookings
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'welcome#index'
   get '/sessions', to: 'sessions#show'
