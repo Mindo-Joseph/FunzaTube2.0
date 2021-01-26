@@ -355,6 +355,7 @@ DEPENDENCIES
   mini_racer (~> 0.3.1)
   owlcarousel-rails
   pg
+  popper_js
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
   rubocop

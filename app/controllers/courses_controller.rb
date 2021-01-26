@@ -9,6 +9,10 @@ class CoursesController < ApplicationController
  
   def show
     @course = Course.find_by(id: params[:id])
+    respond_to do |format|
+      format.html
+      format.js
+    end
 
   end
 

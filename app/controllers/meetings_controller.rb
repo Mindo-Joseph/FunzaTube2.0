@@ -1,24 +1,34 @@
 class MeetingsController < ApplicationController
     skip_before_action :verify_authenticity_token
+    # before_action :authenticate_user!
+
     def index
       meetings = Meeting.all
       render json: meetings
     end
 
+    def new
+      respond_to do |format|
+        format.html
+        format.js
+      end
+    end
     def show
-      meeting = Meeting.find(params[:id])
-      render json: meeting
+      meeting = Meeting.all
+
     end
 
     def create
-      meeting = Meeting.new(meeting_params)
-      meeting.save
-      if meeting.save
-        render json: meeting
-      else
-        flash[:error] = meeting.errors.full_messages
-        render :'courses/index'
-      end
+      meeting = Meeting.new
+      meeting.title = meeting_params['title']
+      meeting.time_meeting = meeting_params['time_meeting']
+      meeting.start_date = meeting_params['start_date']
+      meeting.end_date = meeting_params['end_date']
+      meeting.start_time = meeting_params['start_time']
+      meeting.end_time = meeting_params['end_time']
+      meeting.user_id = 1
+      meeting.save!
+      p meeting
     end
 
     def destroy

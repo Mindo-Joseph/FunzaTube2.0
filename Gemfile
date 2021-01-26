@@ -19,7 +19,7 @@ gem 'google-cloud-storage', require: false
 gem 'dotenv-rails'
 gem "font-awesome-rails"
 gem 'carrierwave-google-storage'
-
+gem 'popper_js'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker

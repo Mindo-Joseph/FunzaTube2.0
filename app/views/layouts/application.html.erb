@@ -28,8 +28,12 @@
         </ul>
 
       </nav><!-- .nav-menu -->
+      <% if user_signed_in? %>
+        <%= link_to("LogOut",destroy_user_session_path, method: "DELETE",class:"get-started-btn") %>
+        <% else %>
+        <%= link_to("Get Started",new_user_registration_path,class:"get-started-btn") %>
+      <% end %>
 
-      <%= link_to("Get Started",new_user_registration_path,class:"get-started-btn") %>
 
     </div>
   </header><!-- End Header -->
