@@ -1,3 +1,4 @@
 class Course < ApplicationRecord
-    has_many :uploads
+  belongs_to :trainer
+  has_one_attached :image
 end

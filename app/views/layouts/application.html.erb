@@ -6,122 +6,109 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag('https://unpkg.com/flickity@2/dist/flickity.min.css') %>
+    <%= javascript_url "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" %>
+    <%= stylesheet_link_tag('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i') %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'css/application' %>
   </head>
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
 
+      <h1 class="logo mr-auto"><%= link_to("FunzaTube", root_path) %></h1>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><%= link_to("Home", root_path) %></li>
+          <li><%= link_to("Courses", courses_path) %></li>
+          <li><%= link_to "Trainers", trainers_path %></li>
+          <li><%= link_to "Videos", videos_path%></li>
+          <li><%= link_to "Resources", resources_path %></li>
+
+        </ul>
+
+      </nav><!-- .nav-menu -->
+      <% if user_signed_in? %>
+        <%= link_to("LogOut",destroy_user_session_path, method: "DELETE",class:"get-started-btn") %>
+        <% else %>
+        <%= link_to("Get Started",new_user_registration_path,class:"get-started-btn") %>
+      <% end %>
+
+
+    </div>
+  </header><!-- End Header -->
   <body>
+
   <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
-<!--header-->
-  <header class="main-header clearfix" role="header">
-    <div class="logo">
-      <%= link_to  "FunzaTube",  root_path %>
-    </div>
-    <nav class="main-nav " role="navigation">
-      <ul class="main-menu">
-        <li><%= link_to  "Home",  root_path %></li>
-        <li class="has-submenu"><%= link_to  "About Us" %>
-          <ul class="sub-menu">
-            <li><%= link_to  "Who are we" %></li>
-            <li><%= link_to  "What we do" %></li>
-            <li><%= link_to  "How it works"%></li>
-          
-          </ul>
-        </li>
-        <li><%= link_to  "Courses", courses_path %></li>
-        <li><%= link_to  "Contact" %></li>
-        
-        <% if user_signed_in? %>
-           <li><%= link_to  "Log Out", destroy_user_session_path,   method: :delete %></li>
-        <% else %>
-        <li><%= link_to  "Sign Up", new_user_registration_path %></li>
-        <li><%= link_to  "Sign In", new_user_session_path %></li>
-        <% end %>
-        
-      </ul>
-    </nav>
-  </header>
+<div id="modal-holder"></div>
     <%= yield %>
   </body>
-  <footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 footer-column">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <span class="footer-title">Product</span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Product 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Product 2</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4 footer-column">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link" href="#">About us</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4 footer-column">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <span class="footer-title">Contact & Support</span>
-          </li>
-          <li class="nav-item">
-            <span class="nav-link"><i class="fas fa-phone"></i>+2547222446262</span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-envelope"></i>Contact us</a>
-          </li>
-        </ul>
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>FunzaTube</h3>
+            <p>
+              Laikipia <br>
+              Laikipia, LU 535022<br>
+              Kenya <br><br>
+              <strong>Phone:</strong> +25499100226<br>
+              <strong>Email:</strong> info@ft.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Education</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Get the latest content from us in your inbox</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
       </div>
     </div>
 
-    <div class="text-center"><i class="fas fa-ellipsis-h"></i></div>
-    
-    <div class="row text-center">
-      <div class="col-md-4 box">
-        <span class="copyright quick-links">Copyright &copy; FunzaTube <script>document.write(new Date().getFullYear())</script>
-        </span>
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>FunzaTube</span></strong>. All Rights Reserved
+        </div>
+
       </div>
-      <div class="col-md-4 box">
-        <ul class="list-inline social-buttons">
-          <li class="list-inline-item">
-            <a href="#">
-            <i class="fab fa-twitter"></i>
-          </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4 box">
-        <ul class="list-inline quick-links">
-          <li class="list-inline-item">
-            <a href="#">Privacy Policy</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">Terms of Use</a>
-          </li>
-        </ul>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <%= fa_icon "twitter" %>
+        <%= fa_icon "facebook" %>
+        <%= fa_icon "instagram" %>
       </div>
     </div>
-  </div>
-</footer>
+  </footer><!-- End Foo
 </html>

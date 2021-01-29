@@ -2,360 +2,259 @@
 
     <title>FunzaTube</title>
 
-  
-
-
-  <div id="pattern" class="pattern">
-    <!--Begin Pattern HTML-->
-    <div class="logo">
-      <%= link_to  "Home",root_path %><em>Funza</em>Tube
-    </div>
-    <%= link_to  "Menu", class: "menu-link"%><i class="fa fa-bars"></i>
-    <nav id="menu" role="navigation">
-      <ul class="responsive-menu">
-        <li><%= link_to  "Home", root_path %></li>
-          <li><%= link_to  "About" %></li>
-          <li><%= link_to  "Courses" %></li>
-          <li><%= link_to  "Video" %></li>
-          <li><%= link_to  "Contact" %></li>
-      </ul>
-    </nav>
-  </div>
-
-
-  <!-- ***** Main Banner Area Start ***** -->
-  <section class="section main-banner" id="top" data-section="section1">
-     <%= video_tag(["introvideo.mp4"],autoplay: true, loop: true, type: "video", muted: true) %>
-      <div class="video-overlay header-text">
-          <div class="caption">
-              <h6>Peer Based Teaching</h6>
-              <h2><em>Your</em> Classroom</h2>
-              <div class="main-button">
-                  <div class="scroll-to-section"><%= link_to  "Discover More" %></div>
-              </div>
-          </div>
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex justify-content-center align-items-center">
+      <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+        <h1>Learning Today,<br>Leading Tomorrow</h1>
+        <h2>The best tech tutorial site</h2>
+        <%= link_to("Get Started",new_user_registration_path, class:"btn-get-started") %>
       </div>
-  </section>
-  <!-- ***** Main Banner Area End ***** -->
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+
+          <div class="section-title">
+            <h2>About</h2>
+            <p>About Us</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+              <img src="https://storage.googleapis.com/funzatube/images/about.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+              <h3>A message from the team</h3>
+              <p class="font-italic">
+                Welcome to FunzaTube, your number one source for all things education. We're dedicated to providing you the best of online resources and tutors, with a focus on dependability. customer service, and up to date content.
 
 
-  <section class="features">
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <div class="features-post">
-            <div class="features-content">
-              <div class="content-show">
-                <h4><i class="fa fa-pencil"></i>All Courses</h4>
-              </div>
-              <div class="content-hide">
-                <p>Introducing content from uploaders etc</p>
-                <p class="hidden-sm">The site offers alot of content</p>
-                <div class="scroll-to-section"><%= link_to  "More Info" %></div>
-            </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="features-post second-features">
-            <div class="features-content">
-              <div class="content-show">
-                <h4><i class="fa fa-graduation-cap"></i>Virtual Sessions</h4>
-              </div>
-              <div class="content-hide">
-                <p>Set up a meeting with a creator and attend one of his popular classes</p>
-                <p class="hidden-sm">All classes are subject to payment or free depending on the creator</p>
-                <div class="scroll-to-section"><%= link_to  "Details" %></div>
-            </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="features-post third-features">
-            <div class="features-content">
-              <div class="content-show">
-                <h4><i class="fa fa-book"></i>Resources</h4>
-              </div>
-              <div class="content-hide">
-                <p>Real meetings seek to emulate normal face to face learning</p>
-                <p class="hidden-sm">Due to COVID-19 restrictions this option will not be available for a while</p>
-                <div class="scroll-to-section"><%= link_to  "Read more" %></div>
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+                We're working to turn our passion for learning into a booming educational store. We hope you enjoy our products as much as we enjoy offering them to you.
 
-  <section class="section why-us" data-section="section2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-heading">
-            <h2>Why choose FunzaTube?</h2>
+              <br>
+                Sincerely,<br>
+
+                FunzaTube Team
+              </p>
+              <%#= link_to("Learn More", class: 'learn-more-btn') %>
+              <a href="about.html" class="learn-more-btn">Learn More</a>
+            </div>
           </div>
+
         </div>
-        <div class="col-md-12">
-          <div id='tabs'>
-            <ul>
-              <li><%= link_to  "Best Education" %></li>
-              <li><%= link_to  "Quality Content" %></li>
-              <li><%= link_to  "Easy to use" %></li>
-            </ul>
-            <section class='tabs-content'>
-              <article id='tabs-1'>
+      </section><!-- End About Section -->
+
+      <!-- ======= Counts Section ======= -->
+      <section id="counts" class="counts section-bg">
+        <div class="container">
+
+          <div class="row counters">
+
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">1232</span>
+              <p>Students</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">64</span>
+              <p>Courses</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">42</span>
+              <p>Events</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">15</span>
+              <p>Trainers</p>
+            </div>
+
+          </div>
+
+        </div>
+      </section><!-- End Counts Section -->
+
+      <!-- ======= Why Us Section ======= -->
+      <section id="why-us" class="why-us">
+        <div class="container" data-aos="fade-up">
+
+          <div class="row">
+            <div class="col-lg-4 d-flex align-items-stretch">
+              <div class="content">
+                <h3>Why Choose FunzaTube?</h3>
+                <p>
+                 We provide extensive libraries of educational resources and access to peer teachers
+                </p>
+                <div class="text-center">
+                  <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon-boxes d-flex flex-column justify-content-center">
                 <div class="row">
-                  <div class="col-md-6">
-                    <%= image_tag("choose-us-image-01.png") %>
+                  <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box mt-4 mt-xl-0">
+                      <%= fa_icon "laptop" %>
+                      <h4>Education</h4>
+                      <p>Explore the tonnes of resources we have, to set up your tech career</p>
+                    </div>
                   </div>
-                  <div class="col-md-6">
-                    <h4>Best Education</h4>
-                    <p>FunzaTube is free educational peer teaching platform with links to resources.</p>
+                  <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box mt-4 mt-xl-0">
+                      <%= fa_icon "users" %>
+                      <h4>Peer Generated</h4>
+                      <p>A majority of our trainers are peers who have been vetted to provide online teaching to you</p>
+                    </div>
                   </div>
-                </div>
-              </article>
-              <article id='tabs-2'>
-                <div class="row">
-                  <div class="col-md-6">
-                    <%= image_tag("choose-us-image-02.png") %>
-                  </div>
-                  <div class="col-md-6">
-                    <h4>Quality Content</h4>
-                    <p>The creators of content are thoroughly checked and we have limits as to what form of content can be uploaded</p> 
-                  </div>
-                </div>
-              </article>
-              <article id='tabs-3'>
-                <div class="row">
-                  <div class="col-md-6">
-                    <%= image_tag("choose-us-image-03.png") %>
-                  </div>
-                  <div class="col-md-6">
-                    <h4>Easy to use</h4>
-                    <p>Our platform seeks to make it very easy to interact with content</p>
+                  <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box mt-4 mt-xl-0">
+                      <%= fa_icon "check-circle" %>
+                      <h4>Convenient</h4>
+                      <p>Experience this great service on any device</p>
+                    </div>
                   </div>
                 </div>
-              </article>
-            </section>
+              </div><!-- End .content-->
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="section courses" data-section="section4">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-heading">
-            <h2>Choose Your Course</h2>
-          </div>
         </div>
-        <div class="owl-carousel owl-theme">
-          <div class="item">
-            <%= image_tag("courses-01.jpg") %>
-            <div class="down-content">
-              <h4>Computer Science</h4>
-              <p>You can get computer science related material from the site</p>
-              <div class="author-image">
-                <%= image_tag("author-01.png") %>
-              </div>
-              <div class="text-button-pay">
-                <%= link_to  "Pay" %><i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <%= image_tag("courses-02.jpg") %>
-            <div class="down-content">
-              <h4>Business World</h4>
-              <p>Learn Business stuff</p>
-              <div class="author-image">
-                <%= image_tag("author-02.png") %>
-              </div>
-              <div class="text-button-free">
-                <%= link_to  "Free" %> <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <%= image_tag("courses-03.jpg") %>
-            <div class="down-content">
-              <h4>Media Technology</h4>
-              <p>Introduction to movie tech with a world renown tutor</p>
-              <div class="author-image">
-                <%= image_tag("author-03.png" ) %>
-              </div>
-              <div class="text-button-pay">
-                <%= link_to  "text" %>"#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <%= image_tag("courses-04.jpg") %>
-            <div class="down-content">
-              <h4>Communications</h4>
-              <p>The most sought after skill in todays virtual job market, learn the ways you can become a beter communicator</p>
-              <div class="author-image">
-                <%= image_tag("author-04.png") %>
-              </div>
-              <div class="text-button-free">
-                <%= link_to  "Free" %><i class="fa fa-angle-double-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <%= image_tag("courses-05.jpg") %>
-            <div class="down-content">
-              <h4>Business Ethics</h4>
-              <p>Some business logic fundamentals</p>
-              <div class="author-image">
-                <%= image_tag("author-05.png") %>
-              </div>
-              <div class="text-button-pay">
-                <%= link_to  "text" %>"#">Pay <i class="fa fa-angle-double-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <%= image_tag("courses-01.jpg") %>
-            <div class="down-content">
-              <h4>Photography</h4>
-              <p>Photography related courses</p>
-              <div class="author-image">
-                <%= image_tag("author-01.png") %>
-              </div>
-              <div class="text-button-free">
-                <%= link_to  "Free" %><i class="fa fa-angle-double-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <%= image_tag("courses-02.jpg") %>
-            <div class="down-content">
-              <h4>Web Development</h4>
-              <p>Become a world class web developer</p>
-              <div class="author-image">
-                <%= image_tag("author-02.png") %>
-              </div>
-              <div class="text-button-free">
-                <%= link_to  "Free" %><i class="fa fa-angle-double-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <%= image_tag("courses-03.jpg") %>
-            <div class="down-content">
-              <h4>Learn HTML CSS</h4>
-              <p>The fundamentals of web development</p>
-              <div class="author-image">
-                <%= image_tag("author-03.png") %>
-              </div>
-              <div class="text-button-pay">
-                <%= link_to  "Pay" %><i class="fa fa-angle-double-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <%= image_tag("courses-04.jpg") %>
-            <div class="down-content">
-              <h4>Social Media</h4>
-              <p>Become a Social media mareting genius</p>
-              <div class="author-image">
-                <%= image_tag("author-04.png") %>
-              </div>
-              <div class="text-button-pay">
-                <%= link_to  "Pay" %><i class="fa fa-angle-double-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <%= image_tag("courses-05.jpg") %>
-            <div class="down-content">
-              <h4>Digital Arts</h4>
-              <p>Indulge in the digital arts</p>
-              <div class="author-image">
-                <%= image_tag("author-05.png") %>
-              </div>
-              <div class="text-button-free">
-                <%= link_to  "Free" %><i class="fa fa-angle-double-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <%= image_tag("courses-01.jpg") %>
-            <div class="down-content">
-              <h4>Media Streaming</h4>
-              <p>Want to become a media genius</p>
-              <div class="author-image">
-                <%= image_tag("author-01.png") %>
-              </div>
-              <div class="text-button-pay">
-                <%= link_to  "Pay" %><i class="fa fa-angle-double-right"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <section class="section contact" data-section="section6">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-heading">
-            <h2>Let’s Keep In Touch</h2>
-          </div>
-        </div>
-        <div class="col-md-6">
-        
-                    
-          <form id="contact" action="" method="post">
-            <div class="row">
-              <div class="col-md-6">
-                  <fieldset>
-                    <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
-                  </fieldset>
-                </div>
-                <div class="col-md-6">
-                  <fieldset>
-                    <input name="email" type="text" class="form-control" id="email" placeholder="Your Email" required="">
-                  </fieldset>
-                </div>
-              <div class="col-md-12">
-                <fieldset>
-                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                </fieldset>
-              </div>
-              <div class="col-md-12">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="button">Send Message Now</button>
-                </fieldset>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="col-md-6">
-          <div id="map">
-            <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section><!-- End Why Us Section -->
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p><i class="fa fa-copyright"></i> Copyright 2020 by FunzaTube
-          
-        </div>
-      </div>
-    </div>
-  </footer>
+      <!-- ======= Features Section ======= -->
+      <section id="features" class="features">
+        <div class="container" data-aos="fade-up">
 
-  
-  <%=javascript_pack_tag 'sliders.js'%>
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-lg-3 col-md-4">
+              <div class="icon-box">
+                <%= fa_icon "signal" %>
+                <h3><a href="">Online Learning</a></h3>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+              <div class="icon-box">
+                <%= fa_icon "laptop" %>
+                <h3><a href="">Web Development</a></h3>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+              <div class="icon-box">
+                <%= fa_icon "money" %>
+                <h3><a href="">Affordable</a></h3>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+              <div class="icon-box">
+                <%= fa_icon "hourglass" %>
+                <h3><a href="">Time saving</a></h3>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section><!-- End Features Section -->
+
+      <!-- ======= Popular Courses Section ======= -->
+      <section id="popular-courses" class="courses">
+        <div class="container" data-aos="fade-up">
+
+          <div class="section-title">
+            <h2>Courses</h2>
+            <p>Popular Courses</p>
+          </div>
+
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <%@courses.each do |course| %>
+                <div class="course-item">
+                  <%= image_tag(course.imageUrl, class:"img-fluid") %>
+                <div class="course-content">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4><%= course.category %></h4>
+                    <p class="price">$<%= course.price %></p>
+                  </div>
+
+                  <h3><%= link_to(course.title, courses_path) %></h3>
+                  <p><%= course.description %></p>
+                  <div class="trainer d-flex justify-content-between align-items-center">
+                    <div class="trainer-profile d-flex align-items-center">
+                      <% trainer = Trainer.find_by(id: course.trainer_id) %>
+                      <%= image_tag(trainer.imageUrl, class: "img-fluid") %>
+
+                      <span><%= trainer.name %></span>
+                    </div>
+                    <div class="trainer-rank d-flex align-items-center">
+                     <%= fa_icon "users" %>50
+                      &nbsp;&nbsp;
+                      <%= fa_icon "heart" %>65
+                    </div>
+                  </div>
+                </div>
+                </div>
+              <% end %>
+             <!-- End Course Item-->
+            </div>
+
+
+          </div>
+
+        </div>
+      </section><!-- End Popular Courses Section -->
+
+      <!-- ======= Trainers Section ======= -->
+      <section id="trainers" class="trainers">
+        <div class="container" data-aos="fade-up">
+
+          <div class="section-title">
+            <h2>Trainers</h2>
+            <p>Our Professional Trainers</p>
+          </div>
+
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="member">
+                <%@trainers.each do |trainer| %>
+                  <%=image_tag(trainer.imageUrl,class: "img-fluid") %>
+                  <div class="member-content">
+                    <h4><%= trainer.name %></h4>
+                    <span><%= trainer.category %></span>
+                    <p>
+                      <%= trainer.tagline %>
+                    </p>
+                    <div class="social">
+                      <%= fa_icon "twitter" %>
+                      <%= fa_icon "facebook" %>
+                      <%= fa_icon "instagram" %>
+                      <%= fa_icon "linkedin" %>
+                    </div>
+                  </div>
+                <% end %>
+
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </div>
+      </section><!-- End Trainers Section -->
+
+    </main><!-- End #main -->
+
+
+    <a href="#" class="back-to-top"><%= fa_icon "arrow-up" %></a>
+    <div id="preloader"></div>
+
+
+
+    <%=javascript_pack_tag 'main'%>
+

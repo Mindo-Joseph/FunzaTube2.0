@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  meeting: one
+  name: MyString
+  date: 2021-01-21
+  time: 2021-01-21 18:59:21
+  email: MyString
+  message: MyText
+
+two:
+  meeting: two
+  name: MyString
+  date: 2021-01-21
+  time: 2021-01-21 18:59:21
+  email: MyString
+  message: MyText
