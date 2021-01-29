@@ -1,0 +1,15 @@
+<%= form_for @user do |f| %>
+<div class="form mt-5 ml-5 pl-5 upload">
+    <div class="btn  float-left" style="background-color:black;color:white;">  
+      <%= f.file_field :picture %>
+    </div>
+    <div class="wrapper">
+        <i class="fas fa-cloud-upload-alt fa-lg ml-5 grey-text" aria-hidden="true" ></i>&nbsp;&nbsp;
+      <input class="file-path validate my-3 " type="text" style="border:none;" placeholder="Upload your file ..."  >
+    </div>
+    <div class= "btn btn-success">
+      <%= submit_tag "Upload"%>
+    </div>
+</div>
+<%= javascript_pack_tag 'filesupload.js'%>
+<%end%> 
