@@ -1,6 +1,7 @@
 class MeetingsController < ApplicationController
     skip_before_action :verify_authenticity_token
     # before_action :authenticate_user!
+    respond_to :html, :json
 
     def index
       meetings = Meeting.all
@@ -8,13 +9,11 @@ class MeetingsController < ApplicationController
     end
 
     def new
-      respond_to do |format|
-        format.html
-        format.js
-      end
+      @meeting = Meeting.new
+      respond_modal_with @meeting
     end
     def show
-      meeting = Meeting.all
+      @meetings = Meeting.all
 
     end
 
@@ -26,9 +25,11 @@ class MeetingsController < ApplicationController
       meeting.end_date = meeting_params['end_date']
       meeting.start_time = meeting_params['start_time']
       meeting.end_time = meeting_params['end_time']
-      meeting.user_id = 1
+      meeting.user_id = current_user.id
       meeting.save!
       p meeting
+      respond_modal_with meeting, location: meetings_path
+      redirect_to course_path
     end
 
     def destroy

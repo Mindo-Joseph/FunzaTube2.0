@@ -1,0 +1,59 @@
+<div class=" d-flex justify-content-center mt-5">
+<%= form_with model:@meeting, remote: request.xhr?, html: { data: { modal: true } } do |form| %>
+  <div class="form-group">
+    <div class="col-xs-3">
+      <%= form.label :title %>
+      <%= form.text_field :title, class: "form-control"%>
+    </div>
+
+  </div>
+  <div class="form-group">
+    <div class="col-xs-3">
+      <%= form.label :time_meeting %>
+      <%= form.text_field :time_meeting,class: "form-control" %>
+    </div>
+
+  </div>
+  <div class="form-group">
+    <div class="col-xs-3">
+      <%= form.label :start_date %>
+      <%= form.date_field :start_date,class: "form-control" %>
+    </div>
+
+  </div>
+  <div class="form-group">
+    <div class="col-xs-3">
+      <%= form.label :end_date %>
+      <%= form.date_field :end_date,class: "form-control" %>
+    </div>
+
+  </div>
+  <div class="form-group">
+    <div class="col-xs-3">
+      <%= form.label :start_time %>
+      <%= form.time_field :start_time,
+                          value: "%H:%M",
+                          min: 'hh:mm:ss',
+                          max: 'hh:mm:ss',
+                          class: "form-control"
+
+      %>
+    </div>
+
+  </div>
+  <div class="form-group">
+    <div class="col-xs-3">
+      <%= form.label :end_time %>
+      <%= form.time_field :end_time,
+                          value: "%H:%M",
+                          min: 'hh:mm:ss',
+                          max: 'hh:mm:ss',
+                          class: "form-control"
+
+      %>
+    </div>
+
+  </div>
+  <%= form.submit class:"btn btn-success mt-5" %>
+<% end %>
+</div>

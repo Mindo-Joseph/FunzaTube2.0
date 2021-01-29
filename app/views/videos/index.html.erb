@@ -1,4 +1,16 @@
+
+
+<%= javascript_include_tag "https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js",integrity:true, crossorigin: "anonymous" %>
+<%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css", integrity: true, crossorigin: "anonymous" %>
 <div class="carousel" data-flickity='{ "wrapAround": true }'>
+  <div class="ais-InstantSearch">
+    <h1>Course Videos</h1>
+
+    <div id="searchbox"></div>
+    <div id="hits"></div>
+
+
+  </div>
   <% @videos.each do |video| %>
     <div class="carousel-cell col-lg-4 col-md-6 d-flex align-items-stretch">
       <article class="video-card">
@@ -34,30 +46,31 @@
 </div>
 
 
-<div class="related-videos">
-  <h4>Resources Center</h4>
-</div>
+<!--<div class="related-videos">-->
+<!--  <h4>Resources Center</h4>-->
+<!--</div>-->
 
-<article class="resources">
-  <div class="item-1 author-details">
-    <div class="text-and-image">
-      <div class="profile-image">
-        <img src="" alt="profile">
-      </div>
-      <div class="profile-description">
-        <p>Books</p>
-        <p>Latest Computer Science Books</p>
-      </div>
+<!--<article class="resources">-->
+<!--  <div class="item-1 author-details">-->
+<!--    <div class="text-and-image">-->
+<!--      <div class="profile-image">-->
+<!--        <img src="" alt="profile">-->
+<!--      </div>-->
+<!--      <div class="profile-description">-->
+<!--        <p>Books</p>-->
+<!--        <p>Latest Computer Science Books</p>-->
+<!--      </div>-->
 
-    </div>
+<!--    </div>-->
 
-    <div class="watch">
-      <button class="watch-btn">
-        <h3>View</h3>
-      </button>
-    </div>
+<!--    <div class="watch">-->
+<!--      <button class="watch-btn">-->
+<!--        <h3>View</h3>-->
+<!--      </button>-->
+<!--    </div>-->
 
-  </div>
+<!--  </div>-->
 
 
-</article>
+<!--</article>-->
+<%= javascript_pack_tag 'searchbar.js' %>
