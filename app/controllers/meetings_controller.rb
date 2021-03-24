@@ -12,6 +12,7 @@ class MeetingsController < ApplicationController
       @meeting = Meeting.new
       respond_modal_with @meeting
     end
+
     def show
       @meetings = Meeting.all
 

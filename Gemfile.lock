@@ -307,6 +307,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    textacular (5.4.0)
+      activerecord (>= 5.0, < 6.2)
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -373,6 +375,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
+  textacular
   turbolinks (~> 5)
   web-console (>= 3.3.0)
   webdrivers
@@ -382,4 +385,4 @@ RUBY VERSION
    ruby 2.7.1p83
 
 BUNDLED WITH
-   2.1.4
+   2.2.14
