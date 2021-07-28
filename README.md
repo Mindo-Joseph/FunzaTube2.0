@@ -6,8 +6,9 @@
   <p align="center">
     This project was my brainchild to bring more inlusion and understanding to CS concepts
   </p>
+  <img src="https://user-images.githubusercontent.com/47358442/126758668-f9ba4ecf-76f7-4110-9b67-a8b753360942.png" alt="Project Image">
 </p>
-![ft2 0](https://user-images.githubusercontent.com/47358442/126758668-f9ba4ecf-76f7-4110-9b67-a8b753360942.png)
+
 
 ## About The Project
 FunzaTube is a peer teaching and learning site where people who need tech help can access peer generated material.
